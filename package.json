@@ -1,0 +1,25 @@
+{
+  "name": "webcrawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "scan": "node scan.js --url=https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/big-fat-software-inc/webcrawler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/big-fat-software-inc/webcrawler/issues"
+  },
+  "homepage": "https://github.com/big-fat-software-inc/webcrawler#readme",
+  "dependencies": {
+    "puppeteer": "^16.1.0"
+  }
+}

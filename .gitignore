@@ -1,0 +1,44 @@
+
+
+# Project
+build
+dist
+node_modules
+BASEURLs.js
+screenshots/*.png
+examples
+links
+array.**.js
+
+
+# Test
+coverage
+cypress/videos/*
+cypress/screenshots/*
+__snapshots__/
+.eslintcache
+test-results
+.env
+.env.*
+
+# Logs
+logs/*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+database.sqlite
+
+# Misc
+.DS_Store
+src/.DS_Store
+
+
+# Editors and IDEs
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
