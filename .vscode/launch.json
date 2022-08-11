@@ -16,6 +16,12 @@
       "name": "Run npm scan",
       "request": "launch",
       "type": "node-terminal"
+    },
+    {
+      "command": "npm run scan:url",
+      "name": "Read URL from terminal - npm scan",
+      "request": "launch",
+      "type": "node-terminal"
     }
   ]
 }

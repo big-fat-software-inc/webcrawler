@@ -3,16 +3,20 @@ const process = require("process");
 
 const utils = require("./utils");
 const options = require("./options");
+const askAQuestion = require("./askQuestions");
 
 async function ScanAndWriteLinks(__url) {
   let url;
-  const args = process.argv.slice(2);
 
-  if (args.length !== 0) {
-    url = args[1];
-  } else {
+  if (__url) {
     url = __url;
+  } else if (process.argv.slice(2).length !== 0) {
+    url = process.argv.slice(2)[0].replace("--url=", "");
+  } else {
+    url = await askAQuestion(`Please enter a URL::`);
   }
+  console.log(`URL Received:: ${url}!`);
+
   const browser = await puppeteer.launch(options);
   const page = await browser.newPage();
 
@@ -49,5 +53,7 @@ async function ScanAndWriteLinks(__url) {
 
   await browser.close();
 }
+
+ScanAndWriteLinks();
 
 module.exports = ScanAndWriteLinks;
